@@ -12,9 +12,9 @@ import (
 
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
-	coreiface "github.com/ipfs/interface-go-ipfs-core"
-	caopts "github.com/ipfs/interface-go-ipfs-core/options"
-	path "github.com/ipfs/interface-go-ipfs-core/path"
+	coreiface "github.com/SJTU-OpenNetwork/interface-go-ipfs-core"
+	caopts "github.com/SJTU-OpenNetwork/interface-go-ipfs-core/options"
+	path "github.com/SJTU-OpenNetwork/interface-go-ipfs-core/path"
 )
 
 type BlockAPI CoreAPI

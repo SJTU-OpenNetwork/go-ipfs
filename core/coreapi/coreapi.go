@@ -25,6 +25,7 @@ import (
 	"github.com/SJTU-OpenNetwork/go-ipfs/repo"
 
 	"github.com/SJTU-OpenNetwork/go-stream"
+	coreiface "github.com/SJTU-OpenNetwork/interface-go-ipfs-core" // add stream related api (2020.01.29.Jerry)
 
 	bserv "github.com/ipfs/go-blockservice"
 	"github.com/ipfs/go-ipfs-blockstore"
@@ -35,8 +36,7 @@ import (
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log"
 	dag "github.com/ipfs/go-merkledag"
-	coreiface "github.com/ipfs/interface-go-ipfs-core"
-	"github.com/ipfs/interface-go-ipfs-core/options"
+	"github.com/SJTU-OpenNetwork/interface-go-ipfs-core/options"
 	ci "github.com/libp2p/go-libp2p-core/crypto"
 	p2phost "github.com/libp2p/go-libp2p-core/host"
 	peer "github.com/libp2p/go-libp2p-core/peer"
@@ -148,9 +148,9 @@ func (api *CoreAPI) PubSub() coreiface.PubSubAPI {
 }
 
 // Stream returns the StreamAPI interface implementation backed by the go-ipfs node
-//func (api *CoreAPI) Stream() coreiface.StreamAPI {
-//	return (*StreamAPI)(api)
-//}
+func (api *CoreAPI) Stream() coreiface.StreamAPI {
+	return (*StreamAPI)(api)
+}
 
 // WithOptions returns api with global options applied
 func (api *CoreAPI) WithOptions(opts ...options.ApiOption) (coreiface.CoreAPI, error) {

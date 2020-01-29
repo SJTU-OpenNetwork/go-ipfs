@@ -21,9 +21,9 @@ import (
 	ft "github.com/ipfs/go-unixfs"
 	unixfile "github.com/ipfs/go-unixfs/file"
 	uio "github.com/ipfs/go-unixfs/io"
-	coreiface "github.com/ipfs/interface-go-ipfs-core"
-	options "github.com/ipfs/interface-go-ipfs-core/options"
-	path "github.com/ipfs/interface-go-ipfs-core/path"
+	coreiface "github.com/SJTU-OpenNetwork/interface-go-ipfs-core"
+	options "github.com/SJTU-OpenNetwork/interface-go-ipfs-core/options"
+	path "github.com/SJTU-OpenNetwork/interface-go-ipfs-core/path"
 )
 
 type UnixfsAPI CoreAPI

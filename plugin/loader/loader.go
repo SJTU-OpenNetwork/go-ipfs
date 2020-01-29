@@ -15,7 +15,7 @@ import (
 
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log"
-	coreiface "github.com/ipfs/interface-go-ipfs-core"
+	coreiface "github.com/SJTU-OpenNetwork/interface-go-ipfs-core"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 
