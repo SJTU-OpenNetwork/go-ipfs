@@ -1,7 +1,7 @@
 package coreapi
 
 import (
-	"github.com/SJTU-OpenNetwork/go-stream/stream"
+	"github.com/SJTU-OpenNetwork/go-stream"
 )
 
 type StreamAPI CoreAPI
