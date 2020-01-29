@@ -24,6 +24,8 @@ import (
 	"github.com/SJTU-OpenNetwork/go-ipfs/pin"
 	"github.com/SJTU-OpenNetwork/go-ipfs/repo"
 
+	"github.com/SJTU-OpenNetwork/go-stream/stream"
+
 	bserv "github.com/ipfs/go-blockservice"
 	"github.com/ipfs/go-ipfs-blockstore"
 	"github.com/ipfs/go-ipfs-exchange-interface"
@@ -71,6 +73,8 @@ type CoreAPI struct {
 	provider provider.System
 
 	pubSub *pubsub.PubSub
+
+	stream *stream.Router
 
 	checkPublishAllowed func() error
 	checkOnline         func(allowOffline bool) error
@@ -141,6 +145,11 @@ func (api *CoreAPI) Swarm() coreiface.SwarmAPI {
 // PubSub returns the PubSubAPI interface implementation backed by the go-ipfs node
 func (api *CoreAPI) PubSub() coreiface.PubSubAPI {
 	return (*PubSubAPI)(api)
+}
+
+// Stream returns the StreamAPI interface implementation backed by the go-ipfs node
+func (api *CoreAPI) Stream() coreiface.StreamAPI {
+	return (*StreamAPI)(api)
 }
 
 // WithOptions returns api with global options applied
